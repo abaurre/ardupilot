@@ -169,6 +169,7 @@
 #endif
 
 #include "mode.h"
+#include "mode_ctrl_slave.h"
 
 class Copter : public AP_Vehicle {
 public:
@@ -194,6 +195,7 @@ public:
     friend class ModeAcro_Heli;
     friend class ModeAltHold;
     friend class ModeAuto;
+    friend class ModeCtrlSlave;
     friend class ModeAutoTune;
     friend class ModeAvoidADSB;
     friend class ModeBrake;
@@ -920,6 +922,7 @@ private:
     ModeAcro mode_acro;
 #endif
 #endif
+    ModeCtrlSlave mode_slave;
     ModeAltHold mode_althold;
 #if MODE_AUTO_ENABLED == ENABLED
     ModeAuto mode_auto;
